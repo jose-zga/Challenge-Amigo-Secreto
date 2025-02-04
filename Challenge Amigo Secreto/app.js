@@ -15,12 +15,23 @@ function agregarAmigo(){
         amigos.push(inputNombre);
         document.getElementById("amigo").value = "";
         console.log(amigos);
+        actualizarListaAmigos();
     }
     
 }
 
+function actualizarListaAmigos (){
+    let listaDeNombres = document.getElementById("listaAmigos");
+    listaDeNombres.innerHTML = "";
+
+    for (let i = 0; i < amigos.length; i++) {
+        let item = document.createElement("li");
+        item.textContent = amigos[i];
+        listaDeNombres.appendChild(item);
+    }
+}
+
+
+
 
 agregarAmigo();
-
-
-    
