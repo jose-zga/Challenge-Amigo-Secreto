@@ -39,7 +39,7 @@ function sortearAmigo (){
     }else{
         let numeroAleatorio = Math.floor(Math.random() * amigos.length);// genera un numero aleatorio
         let busquedaEnAmigos = amigos[numeroAleatorio]; //localiza el nombre que corresponde al indice  del numero aleatorio
-        document.getElementById("listaAmigos").style.display = "none";
+        document.getElementById("listaAmigos").style.display = "none"; //oculta la lista de nombres proporcionados para mostrar el mensaje del amigo secreto
         let amigoSecreto = document.getElementById("resultado"); //Se obtiene el valor de resultado del HTML
         amigoSecreto.innerHTML = `El amigo secreto es ${busquedaEnAmigos}`; //se muestra el mensaje con el amigo secreto
 
